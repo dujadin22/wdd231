@@ -1,0 +1,65 @@
+@media (min-width: 650px) {
+    /* Hide Hamburger */
+    #menu { display: none; }
+
+    /* Flex Navigation */
+    .navigation {
+        display: flex; /* Required: Horizontal navigation using CSS Flex */
+        justify-content: center;
+    }
+
+    .navigation li { 
+        flex: 1 1 auto; 
+        max-width: 200px; 
+    }
+
+    /* Wayfinding styling for large screens */
+    .navigation li a.active {
+        border-left: none;
+        border-bottom: 4px solid var(--accent-color);
+    }
+
+    /* Grid Layout for Main Content - Corrected to .grid-container */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* About Me (Left) | Photo (Right) */
+        gap: 30px;
+        align-items: start;
+    }
+
+    /* Ensure the Courses section spans across both columns */
+    .courses {
+        grid-column: 1 / -1; 
+        margin-top: 20px;
+    }
+
+    /* Course Filtering Layout */
+    .filters {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 1rem;
+    }
+
+    .filters button {
+        padding: 0.8rem 2rem;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+    }
+
+    .filters button:hover {
+        background-color: var(--accent-color);
+    }
+
+    /* Responsive Grid for Course Pills */
+    #course-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 1rem;
+    }
+}

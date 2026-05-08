@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Home Page | Felix Michael</title>
+    
+    <meta name="description" content="WDD 231 Course Home Page for Felix Michael. A professional showcase of networking, cybersecurity, and web development expertise.">
+    <meta name="author" content="Felix Michael">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    
+    <script src="scripts/navigate.js" defer></script>
+    <script src="scripts/getdate.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/java.svg" alt="Felix Michael Logo" width="50" height="50">
+        <span>Felix Michael</span>
+        <button id="menu" title="Open Menu"></button>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="project/index.html">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        
+        <div class="grid-container">
+            <section class="card">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I'm Michael Felix, a passionate and determined tech enthusiast with growing expertise 
+                    in networking, cybersecurity, cloud computing, and web technologies. Known for being 
+                    curious and hands-on, I enjoy exploring real-world IT solutions, configuring networks, 
+                    troubleshooting systems, and learning modern technologies that shape the digital world.
+                </p>
+                <p>
+                    I have a strong interest in OSPF configuration, VPN design, DNS troubleshooting, and 
+                    cloud platforms like Microsoft Azure. Beyond technology, I value growth, consistency, 
+                    and creativity, often helping others understand complex concepts in simpler ways.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Student Photo</h2>
+                <img src="images/pics.jpg" alt="Felix Michael profile photo" loading="lazy">
+            </section>
+
+            <section class="card courses">
+                <h2>Web Certificate Courses</h2>
+                <div class="filters">
+                    <button id="all">All</button>
+                    <button id="cse">CSE</button>
+                    <button id="wdd">WDD</button>
+                </div>
+                
+                <div id="course-list">
+                    </div>
+                
+                <p id="total-credits"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com/felixdujadin222" target="_blank" rel="noopener">
+                <img src="images/github.svg" alt="GitHub Logo">
+            </a>
+            <a href="https://www.linkedin.com/in/michael-felix-963444251/" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn Logo">
+            </a>
+            <a href="https://x.com/chinedu_mi36153" target="_blank" rel="noopener">
+                <img src="images/offline.svg" alt="X Logo">
+            </a>
+        </div>
+
+        <p>&copy;<span id="currentyear"></span> | Felix Michael | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
