@@ -23,7 +23,7 @@
 #primary-nav li a:hover, 
 #primary-nav li a.active {
     background-color: var(--secondary-color);
-    color: #000; /* Contrast against highlight */
+    color: #000;
 }
 
 /* --- Business Directory: Grid View --- */
@@ -36,10 +36,16 @@
     padding: 0 20px;
 }
 
+/* Ensure the hidden h2 doesn't create extra space in the grid */
+.grid > h2.visually-hidden {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
 .grid section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers all text and images horizontally */
+    align-items: center; 
     justify-content: flex-start;
     padding: 2rem;
     border: 1px solid #ddd;
@@ -50,7 +56,7 @@
 }
 
 .grid section:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
+    transform: translateY(-5px);
 }
 
 .grid section img {
@@ -75,21 +81,24 @@
     padding: 0 20px;
 }
 
+/* Hide the accessibility heading entirely when in list view */
+.list > h2.visually-hidden {
+    display: none;
+}
+
 .list section {
     display: grid;
-    /* Aligns content into 4 distinct columns */
     grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
     align-items: center;
     padding: 15px 25px;
     border: 1px solid #eee;
-    margin-bottom: -1px; /* Merges borders for a table effect */
+    margin-bottom: -1px;
 }
 
 .list section:nth-child(even) {
-    background-color: #f4f7f9; /* Zebra striping */
+    background-color: #f4f7f9;
 }
 
-/* Hide images and taglines in List view for a clean data look */
 .list section img, 
 .list section .tagline,
 .list section .membership-badge {

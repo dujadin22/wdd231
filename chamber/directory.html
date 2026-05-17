@@ -11,16 +11,20 @@
 
     <meta property="og:title" content="Lagos Chamber Business Directory">
     <meta property="og:description" content="Connecting Lagos's local businesses to the community. Join us today.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/felixdujadin222/wdd231/main/chamber/images/og-image.jpg">
+    <meta property="og:image" content="https://felixdujadin222.github.io/wdd231/chamber/images/og-image.jpg">
     <meta property="og:url" content="https://felixdujadin222.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/larger.css" media="(min-width: 64rem)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 64rem)">
     
-    <script src="script/main.js" defer></script>
-    <script src="script/directory.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +32,7 @@
         <div class="logo-box">
             <img src="images/tech.png" alt="Lagos Chamber Logo" width="50" height="50">
             <div class="title-sub">
-                <h1>Lagos</h1>
+                <div class="header-site-title">Lagos</div>
                 <span>Chamber of Commerce</span>
             </div>
         </div>
@@ -53,16 +57,17 @@
 
     <main>
         <div class="hero-minimal">
-            <h2>Business Directory</h2>
+            <h1>Lagos Chamber Business Directory</h1>
         </div>
 
-        <section class="directory-controls">
+        <div class="directory-controls">
             <button id="grid-btn" class="active" title="Grid View">Grid View</button>
             <button id="list-btn" title="List View">List View</button>
-        </section>
+        </div>
 
         <article id="member-container" class="grid">
-            </article>
+            <h2 class="visually-hidden">Member Directory List</h2>
+        </article>
     </main>
 
     <footer>
@@ -85,7 +90,7 @@
             <div class="footer-right">
                 <p>WDD 231 Class Project</p>
                 <p>Michael Felix</p>
-                <p>&copy; <span id="current-year"></span> Lagos Chamber</p>
+                <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
                 <p id="last-modified"></p>
             </div>
         </div>
