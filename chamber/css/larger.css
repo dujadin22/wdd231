@@ -1,0 +1,122 @@
+/* --- Navigation: Desktop Horizontal --- */
+#menu-toggle {
+    display: none; /* Hide hamburger on desktop */
+}
+
+#primary-nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#primary-nav li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#primary-nav li a:hover, 
+#primary-nav li a.active {
+    background-color: var(--secondary-color);
+    color: #000; /* Contrast against highlight */
+}
+
+/* --- Business Directory: Grid View --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 20px;
+}
+
+.grid section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all text and images horizontally */
+    justify-content: flex-start;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.grid section:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.grid section img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.grid section h3 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    color: #003366;
+}
+
+/* --- Business Directory: List View --- */
+.list {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.list section {
+    display: grid;
+    /* Aligns content into 4 distinct columns */
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+    align-items: center;
+    padding: 15px 25px;
+    border: 1px solid #eee;
+    margin-bottom: -1px; /* Merges borders for a table effect */
+}
+
+.list section:nth-child(even) {
+    background-color: #f4f7f9; /* Zebra striping */
+}
+
+/* Hide images and taglines in List view for a clean data look */
+.list section img, 
+.list section .tagline,
+.list section .membership-badge {
+    display: none;
+}
+
+.list section h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* --- Footer: Grid Alignment --- */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.footer-middle { text-align: center; }
+.footer-right { text-align: right; }
+
+.social-icons img {
+    width: 28px;
+    margin: 0 8px;
+    transition: 0.3s;
+}

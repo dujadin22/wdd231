@@ -1,0 +1,177 @@
+/* Core Variables */
+:root {
+    --primary-color: #003366;    /* Deep Professional Blue */
+    --secondary-color: #00a8cc;  /* Accent Blue */
+    --accent-color: #fca311;     /* Gold for Tiers/Buttons */
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+}
+
+/* --- Header & Nav --- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo-box img {
+    margin-bottom: 0.5rem;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#primary-nav {
+    display: none; /* Hidden on mobile by default */
+    list-style: none;
+    padding: 0;
+}
+
+#primary-nav.open {
+    display: block; /* Toggled via JS */
+}
+
+#primary-nav li a {
+    display: block;
+    color: white;
+    padding: 0.8rem;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#primary-nav li a.active {
+    background-color: var(--secondary-color);
+}
+
+/* --- Directory Controls --- */
+.directory-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.directory-controls button {
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    background: white;
+}
+
+.directory-controls button.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* --- Directory Layouts --- */
+#member-container {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+/* Grid View (Mobile: 1 column) */
+.grid section {
+    background: var(--card-bg);
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.grid section img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* List View (Always 1 column) */
+.list section {
+    display: block;
+    background: white;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.list section img {
+    display: none; /* Hide images in list view */
+}
+
+/* --- Footer --- */
+footer {
+    background: #222;
+    color: #ccc;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 0.5rem;
+    filter: invert(1);
+}
+
+
+/* --- Membership Badges --- */
+.membership-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tier Specific Colors */
+.tier-3 { background-color: #ffd700; color: #000; } /* Gold */
+.tier-2 { background-color: #c0c0c0; color: #000; } /* Silver */
+.tier-1 { background-color: #cd7f32; color: #fff; } /* Member/Bronze */
+
+/* --- Dark Mode Styles --- */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+}
+
+body.dark-mode .grid section,
+body.dark-mode .list section {
+    border-color: #333;
+    color: var(--text-color);
+}
+
+body.dark-mode .directory-controls button {
+    background-color: #333;
+    color: white;
+    border-color: #444;
+}
+
+/* --- Navigation Hamburger Icons --- */
+#menu-toggle .close-x {
+    display: none; /* Hide X by default */
+}
+
+#menu-toggle.open .hamburger {
+    display: none; /* Hide hamburger when menu is open */
+}
+
+#menu-toggle.open .close-x {
+    display: inline; /* Show X when menu is open */
+}

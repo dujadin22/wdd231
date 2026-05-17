@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Directory | Lagos Chamber of Commerce</title>
+    
+    <meta name="description" content="Explore the Lagos Chamber of Commerce business directory. Support local businesses and find networking opportunities in Nigeria's commercial hub.">
+    <meta name="author" content="Michael Felix">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Lagos Chamber Business Directory">
+    <meta property="og:description" content="Connecting Lagos's local businesses to the community. Join us today.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/felixdujadin222/wdd231/main/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://felixdujadin222.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css" media="(min-width: 64rem)">
+    
+    <script src="script/main.js" defer></script>
+    <script src="script/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/tech.png" alt="Lagos Chamber Logo" width="50" height="50">
+            <div class="title-sub">
+                <h1>Lagos</h1>
+                <span>Chamber of Commerce</span>
+            </div>
+        </div>
+
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span class="hamburger">&#9776;</span>
+                <span class="close-x">X</span>
+            </button>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Business Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><button id="theme-toggle" title="Toggle Dark Mode">🌓</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       
+
+        <section class="directory-controls">
+            <button id="grid-btn" class="active" title="Grid View">Grid View</button>
+            <button id="list-btn" title="List View">List View</button>
+        </section>
+
+        <article id="member-container" class="grid">
+            </article>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-left">
+                <p><strong>Lagos Chamber of Commerce</strong></p>
+                <p>10 Lagos Business Way, Victoria Island</p>
+                <p>Lagos, Nigeria</p>
+                <p>+234 903 380 0523 | info@felixdujadin.org</p>
+            </div>
+
+            <div class="footer-middle">
+                <div class="social-icons">
+                    <a href="https://youtube.com" aria-label="YouTube"><img src="images/you.svg" alt="YouTube"></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><img src="images/offline.svg" alt="Twitter"></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD 231 Class Project</p>
+                <p>Michael Felix</p>
+                <p>&copy; <span id="current-year"></span> Lagos Chamber</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
