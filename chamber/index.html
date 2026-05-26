@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Lagos Chamber of Commerce</title>
+    
+    <meta name="description" content="Welcome to the Lagos Chamber of Commerce. Connecting local businesses, driving economic growth, and providing premium networking opportunities in Nigeria's commercial hub.">
+    <meta name="author" content="Michael Felix">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Lagos Chamber of Commerce | Home">
+    <meta property="og:description" content="Empowering businesses in Lagos. Join our network today for growth, events, and community support.">
+    <meta property="og:image" content="https://felixdujadin222.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://felixdujadin222.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 64rem)">
+    
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/tech.png" alt="Lagos Chamber Logo" width="50" height="50">
+            <div class="title-sub">
+                <div class="header-site-title">Lagos</div>
+                <span>Chamber of Commerce</span>
+            </div>
+        </div>
+
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span class="hamburger">&#9776;</span>
+                <span class="close-x">X</span>
+            </button>
+            <ul id="primary-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><button id="theme-toggle" title="Toggle Dark Mode">🌓</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+        <h1 class="visually-hidden">Lagos Chamber of Commerce Landing Page</h1>
+
+        <section class="hero-block">
+            <picture>
+                <source media="(min-width: 64rem)" srcset="images/hero-large.jpg">
+                <img src="images/hero-small.jpg" alt="Lagos Commercial Skyline Banner" loading="eager" width="1200" height="450">
+            </picture>
+            <div class="cta-box">
+                <h2>Empower Your Business Growth</h2>
+                <p>Join the largest collective network of innovators and industrial leaders in Nigeria.</p>
+                <a href="join.html" class="cta-button">Join the Chamber Today</a>
+            </div>
+        </section>
+
+        <section class="home-card events-section">
+            <h2>Upcoming Events</h2>
+            <div class="event-item">
+                <h3>Tech Innovation Summit 2026</h3>
+                <p><strong>Date:</strong> June 12, 2026</p>
+                <p>Connect with ecosystem drivers at Victoria Island.</p>
+            </div>
+            <div class="event-item">
+                <h3>SME Networking Breakfast</h3>
+                <p><strong>Date:</strong> June 25, 2026</p>
+                <p>Pitch your services directly to established corporate buyers.</p>
+            </div>
+        </section>
+
+        <section class="home-card weather-section">
+            <h2>Lagos Weather</h2>
+            <div id="weather-current">
+                <p>Loading real-time conditions...</p>
+            </div>
+            <hr>
+            <h3>3-Day Forecast</h3>
+            <div id="weather-forecast">
+                </div>
+        </section>
+
+        <section class="spotlight-container">
+            <h2 class="visually-hidden">Featured Corporate Spotlights</h2>
+            <div id="spotlight-wrapper">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-left">
+                <p><strong>Lagos Chamber of Commerce</strong></p>
+                <p>10 Lagos Business Way, Victoria Island</p>
+                <p>Lagos, Nigeria</p>
+                <p>+234 903 380 0523 | info@felixdujadin.org</p>
+            </div>
+
+            <div class="footer-middle">
+                <div class="social-icons">
+                    <a href="https://youtube.com" aria-label="YouTube"><img src="images/you.svg" alt="YouTube" width="28" height="28"></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><img src="images/offline.svg" alt="Twitter" width="28" height="28"></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="28" height="28"></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD 231 Class Project</p>
+                <p>Michael Felix</p>
+                <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

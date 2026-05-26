@@ -1,4 +1,6 @@
-/* Core Variables */
+/* ==========================================================================
+   Core Variables & Global Reset
+   ========================================================================== */
 :root {
     --primary-color: #003366;    /* Deep Professional Blue */
     --secondary-color: #00a8cc;  /* Accent Blue */
@@ -9,7 +11,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -17,7 +19,7 @@ body {
 }
 
 /* --- Accessibility Helper --- */
-/* Required for W3C Validation of your directory structure */
+/* Required for W3C Validation of hidden elements across all views */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -30,7 +32,9 @@ body {
     border: 0;
 }
 
-/* --- Header & Nav --- */
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -42,7 +46,10 @@ header {
     margin-bottom: 0.5rem;
 }
 
-.title-sub h1 {
+/* Clear W3C fix: Swapped selector from h1 to target the custom class */
+.header-site-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     margin: 0;
     font-size: 1.8rem;
     letter-spacing: 1px;
@@ -86,7 +93,183 @@ header {
     background-color: var(--secondary-color);
 }
 
-/* --- Directory Controls --- */
+/* ==========================================================================
+   Chamber Home / Landing Page Components (Mobile-First Stacking)
+   ========================================================================== */
+.home-grid {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Hero & CTA Elements */
+.hero-block {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.cta-box {
+    background: rgba(0, 51, 102, 0.95);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.cta-box h2 {
+    margin: 0 0 0.5rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #000;
+    font-weight: 700;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.03);
+}
+
+/* Standardized Layout Cards for Home Modules */
+.home-card {
+    background: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.home-card h2 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.3rem;
+}
+
+.event-item {
+    margin-bottom: 1rem;
+}
+
+.event-item h3 {
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* OpenWeather API UI styling */
+.weather-now {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-temp {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.current-desc {
+    margin: 0;
+    font-weight: 600;
+}
+
+#weather-forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 0.8rem;
+    border-radius: 6px;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* Home Page Spotlight Ads Wrapper */
+#spotlight-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.spotlight-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.spotlight-header h3 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+.spotlight-tier {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: var(--primary-color);
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+.spotlight-tagline {
+    font-style: italic;
+    color: #555;
+}
+
+.spotlight-details p {
+    font-size: 0.85rem;
+    margin: 6px 0;
+}
+
+.spotlight-details a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Business Directory Layouts & Mechanics
+   ========================================================================== */
 .directory-controls {
     display: flex;
     justify-content: center;
@@ -108,14 +291,13 @@ header {
     color: white;
 }
 
-/* --- Directory Layouts --- */
 #member-container {
     padding: 0 1rem 2rem 1rem;
     display: grid;
     gap: 1.5rem;
 }
 
-/* Grid View (Mobile: 1 column) */
+/* Grid Mechanics (Mobile Layout) */
 .grid section {
     background: var(--card-bg);
     padding: 1.5rem;
@@ -125,13 +307,19 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+.grid section h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
 .grid section img {
     max-width: 120px;
     height: auto;
     margin-bottom: 10px;
 }
 
-/* List View (Mobile: Simple Stack) */
+/* List Mechanics (Mobile Layout) */
 .list section {
     display: block;
     background: white;
@@ -143,7 +331,31 @@ header {
     display: none; 
 }
 
-/* --- Footer --- */
+/* ==========================================================================
+   Membership Badge Styling (Accessibility Checked)
+   ========================================================================== */
+.membership-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tier-3 { background-color: #ffd700; color: #000; } /* Gold - Pass */
+.tier-2 { background-color: #c0c0c0; color: #000; } /* Silver - Pass */
+
+/* FIXED: Changed from #cd7f32 to a dark bronze base for an elegant 4.5:1 ratio */
+.tier-1 { 
+    background-color: #8b4513; 
+    color: #ffffff; 
+}
+
+/* ==========================================================================
+   Footer Component & Global Structural Adjustments
+   ========================================================================== */
 footer {
     background: #222;
     color: #ccc;
@@ -161,28 +373,14 @@ footer {
 }
 
 .social-icons img {
-    width: 28px;
     margin: 0 0.8rem;
     filter: invert(1);
     opacity: 0.8;
 }
 
-/* --- Membership Badges --- */
-.membership-badge {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.tier-3 { background-color: #ffd700; color: #000; } /* Gold */
-.tier-2 { background-color: #c0c0c0; color: #000; } /* Silver */
-.tier-1 { background-color: #cd7f32; color: #fff; } /* Bronze/Member */
-
-/* --- Dark Mode Styles --- */
+/* ==========================================================================
+   Dark Mode Application States
+   ========================================================================== */
 body.dark-mode {
     --bg-color: #121212;
     --text-color: #e0e0e0;
@@ -192,11 +390,17 @@ body.dark-mode {
 body.dark-mode header { background-color: #000; }
 
 body.dark-mode .grid section,
-body.dark-mode .list section {
+body.dark-mode .list section,
+body.dark-mode .home-card,
+body.dark-mode .spotlight-card {
     border-color: #333;
 }
 
-/* --- Navigation Hamburger Icons --- */
+body.dark-mode .spotlight-tagline {
+    color: #aaa;
+}
+
+/* Hamburger Display Logic */
 #menu-toggle .close-x { display: none; }
 #menu-toggle.open .hamburger { display: none; }
 #menu-toggle.open .close-x { display: inline; }
