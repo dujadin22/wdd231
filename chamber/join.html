@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Lagos Chamber of Commerce</title>
+    <meta name="description" content="Apply for membership with the Lagos Chamber of Commerce. Select a membership level to unlock corporate networking, spotlight advertising, and training opportunities.">
+    <meta name="author" content="Michael Felix">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 64rem)">
+    
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+    <header>
+        <div class="logo-box">
+            <img src="images/tech.png" alt="Lagos Chamber Logo" width="50" height="50">
+            <div class="title-sub">
+                <div class="header-site-title">Lagos</div>
+                <span>Chamber of Commerce</span>
+            </div>
+        </div>
+        
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span class="hamburger">&#9776;</span>
+                <span class="close-x">X</span>
+            </button>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><button id="theme-toggle" title="Toggle Dark Mode">🌓</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="join-main-grid">
+        <h1>Chamber Membership Application</h1>
+        
+        <section class="form-container">
+            <form method="get" action="thankyou.html">
+                <label>First Name*
+                    <input type="text" name="firstName" autocomplete="given-name" title="Enter your official first name" required>
+                </label>
+
+                <label>Last Name*
+                    <input type="text" name="lastName" autocomplete="family-name" title="Enter your legal family name" required>
+                </label>
+
+                <label>Organizational Title
+                    <input type="text" name="orgTitle" autocomplete="organization-title" title="Alpha characters, hyphens, and spaces only. Minimum 7 characters." pattern="[A-Za-z\s\-]{7,}">
+                </label>
+
+                <label>Email Address*
+                    <input type="email" name="email" autocomplete="email" placeholder="ceo@company.com.ng" title="Provide a valid enterprise email address" required>
+                </label>
+
+                <label>Mobile Phone Number*
+                    <input type="tel" name="phone" autocomplete="tel" title="Provide a working primary mobile contact string" required>
+                </label>
+
+                <label>Business / Organization Name*
+                    <input type="text" name="orgName" autocomplete="organization" title="Enter your legal registered corporate entity title" required>
+                </label>
+
+                <label>Membership Level*
+                    <select name="membershipLevel" required title="Select your desired level tier">
+                        <option value="" disabled selected>-- Select Tier Level --</option>
+                        <option value="np">Non-Profit Membership (No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>Business Description
+                    <textarea name="description" title="Provide a short synopsis of your company operations or mission statement" rows="4"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="form-timestamp">
+
+                <input type="submit" value="Submit Application" class="submit-btn">
+            </form>
+        </section>
+
+        <section class="membership-cards-container">
+            <h2>Membership Tier Matrix</h2>
+            <div class="tier-grid">
+                <div class="tier-card animate-load">
+                    <h3>Non-Profit (NP)</h3>
+                    <button type="button" class="modal-trigger-btn" data-target="modal-np">View Benefits &rarr;</button>
+                </div>
+                <div class="tier-card animate-load">
+                    <h3>Bronze Level</h3>
+                    <button type="button" class="modal-trigger-btn" data-target="modal-bronze">View Benefits &rarr;</button>
+                </div>
+                <div class="tier-card animate-load">
+                    <h3>Silver Level</h3>
+                    <button type="button" class="modal-trigger-btn" data-target="modal-silver">View Benefits &rarr;</button>
+                </div>
+                <div class="tier-card animate-load">
+                    <h3>Gold Level</h3>
+                    <button type="button" class="modal-trigger-btn" data-target="modal-gold">View Benefits &rarr;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <dialog id="modal-np" class="benefit-modal">
+        <div class="modal-content">
+            <h2>Non-Profit Tier Features</h2>
+            <p><strong>Cost:</strong> ₦0 / Year (Requires valid NGO / Non-profit registration papers)</p>
+            <ul>
+                <li>Access to the standard general assembly community network.</li>
+                <li>Basic directory listing inclusion with corporate title and link.</li>
+                <li>Standard pricing entry access to monthly open mixers.</li>
+            </ul>
+            <button type="button" class="modal-close-btn">Close Panel</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-bronze" class="benefit-modal">
+        <div class="modal-content">
+            <h2>Bronze Tier Features</h2>
+            <p><strong>Cost:</strong> ₦150,000 / Year</p>
+            <ul>
+                <li>General community assembly ecosystem access.</li>
+                <li>Enhanced directory placement featuring phone and corporate address metadata.</li>
+                <li>10% discounted admission pricing passes to standard training forums.</li>
+            </ul>
+            <button type="button" class="modal-close-btn">Close Panel</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-silver" class="benefit-modal">
+        <div class="modal-content">
+            <h2>Silver Tier Features</h2>
+            <p><strong>Cost:</strong> ₦350,000 / Year</p>
+            <ul>
+                <li>Priority tier placement inside the corporate Business Directory.</li>
+                <li>25% discount packages across all localized development summits.</li>
+                <li>Rotating secondary home-page banner spotlight visibility eligibility.</li>
+                <li>Dedicated invitation privileges to specialized stakeholder mixers.</li>
+            </ul>
+            <button type="button" class="modal-close-btn">Close Panel</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-gold" class="benefit-modal">
+        <div class="modal-content">
+            <h2>Gold Tier Features</h2>
+            <p><strong>Cost:</strong> ₦750,000 / Year</p>
+            <ul>
+                <li>Prime prominent top-tier sorting architecture positioning across all system directory modules.</li>
+                <li>Free unlimited corporate attendance credentials for quarterly economic outlook panels.</li>
+                <li>Guaranteed primary Homepage Partner Spotlight placement rotations.</li>
+                <li>Direct advisory pipeline channels with external regulatory and trade authorities.</li>
+            </ul>
+            <button type="button" class="modal-close-btn">Close Panel</button>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-left">
+                <p><strong>Lagos Chamber of Commerce</strong></p>
+                <p>10 Lagos Business Way, Victoria Island</p>
+                <p>+234 903 380 0523 | info@felixdujadin.org</p>
+            </div>
+            <div class="footer-right">
+                <p>WDD 231 Class Project | Michael Felix</p>
+                <p>&copy; <span id="current-year"></span> Lagos Chamber of Commerce</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
