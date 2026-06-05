@@ -4,7 +4,7 @@
 /* Strict Definition of Project Colors & Fonts Variable System */
 :root {
     --primary-color: #0f172a;       /* Slate Navy */
-    --secondary-color: #059669;     /* Pulse Emerald */
+    --secondary-color: #036c4e;     /* Deep Pulse Emerald - Updated for WCAG AA Contrast Compliance */
     --neutral-light: #f8fafc;       /* Canvas Light */
     --neutral-dark: #334155;        /* Charcoal Text */
     --white: #ffffff;
@@ -125,6 +125,12 @@ hr {
     border-radius: 8px;
     padding: 16px;
     text-align: center;
+}
+
+/* Ensures the swatch title looks like a compact label instead of a giant h3 */
+.color-swatch h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
 }
 
 .swatch-box {
