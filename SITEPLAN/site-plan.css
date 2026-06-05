@@ -1,0 +1,253 @@
+/* Import Valid Google Font Specifications */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Open+Sans:wght@400;500&display=swap');
+
+/* Strict Definition of Project Colors & Fonts Variable System */
+:root {
+    --primary-color: #0f172a;       /* Slate Navy */
+    --secondary-color: #059669;     /* Pulse Emerald */
+    --neutral-light: #f8fafc;       /* Canvas Light */
+    --neutral-dark: #334155;        /* Charcoal Text */
+    --white: #ffffff;
+    
+    --heading-font: 'Inter', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+/* Base Document Formatting Blocks Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    line-height: 1.6;
+    padding: 24px;
+}
+
+/* Styled Structural Layout Components */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 45px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+    letter-spacing: -0.025em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+main {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    border-left: 6px solid var(--secondary-color);
+    padding-left: 14px;
+}
+
+h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 14px;
+}
+
+ul {
+    margin-left: 24px;
+    margin-bottom: 14px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 40px 0;
+}
+
+/* Custom Card & Text Format Utilities */
+.card {
+    background-color: var(--white);
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.domain {
+    background-color: #f1f5f9;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Palette Display Visual Tool Grid */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.color-swatch {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.swatch-box {
+    height: 95px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.primary .swatch-box { background-color: var(--primary-color); }
+.secondary .swatch-box { background-color: var(--secondary-color); }
+.neutral-light .swatch-box { background-color: var(--neutral-light); }
+.neutral-dark .swatch-box { background-color: var(--neutral-dark); }
+
+.color-swatch code {
+    display: inline-block;
+    margin: 6px 0;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.color-swatch p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+/* Typography Visualization Classes */
+.font-example {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.font-example:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.heading-font .sample-text {
+    font-family: var(--heading-font);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.body-font .sample-text {
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+}
+
+/* Semantic Abstract Wireframe Mockups */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.wireframe-box {
+    background-color: #f1f5f9;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobile-view {
+    flex: 1;
+    min-width: 280px;
+    max-width: 340px;
+}
+
+.desktop-view {
+    flex: 2;
+    min-width: 320px;
+}
+
+.wf-element {
+    background-color: var(--white);
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.wf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.grid-span-1 {
+    grid-column: span 1;
+}
+
+.grid-span-2 {
+    grid-column: span 2;
+}
+
+/* Footer Section Rules */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 24px;
+    color: #64748b;
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Responsive Overrides for Compact Layout Behavior */
+@media (max-width: 650px) {
+    .wf-grid {
+        grid-template-columns: 1fr;
+    }
+    .grid-span-1, .grid-span-2 {
+        grid-column: span 1;
+    }
+}

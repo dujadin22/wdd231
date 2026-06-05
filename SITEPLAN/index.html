@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Project Site Plan | LocalPulse</title>
+    <meta name="description" content="Comprehensive site planning blueprint outlining the site purpose, user target scenarios, architectural color palette, typography choices, and layout wireframes for the LocalPulse application.">
+    <link rel="stylesheet" href="site-plan.css">
+</head>
+<body>
+
+    <header>
+        <h1>Individual Project Site Plan</h1>
+        <p class="subtitle">Development &amp; Design Blueprint for LocalPulse</p>
+    </header>
+
+    <main>
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <div class="card">
+                <h3>LocalPulse</h3>
+                <p><strong>Selection Rationale:</strong> The name "LocalPulse" perfectly captures the core mission of the web application: keeping users instantly connected to the "pulse" or active heartbeat of professional tech gatherings, networking events, and career opportunities happening within their immediate geographic region.</p>
+                <p><strong>Optional Domain Availability:</strong> <code class="domain">localpulse-events.org</code></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <div class="card">
+                <p>LocalPulse serves as an interactive, API-driven hub designed to aggregate, filter, and display local tech networking events and professional meetups. By providing clean categorization, integrated maps, and calendar syncing, the application removes friction for developers, engineers, and digital professionals seeking to expand their physical networks, find community mentorship, or uncover localized career growth channels.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="scenarios">
+            <h2>Target Audience Scenarios</h2>
+            <div class="card">
+                <p>To establish structural scope and determine primary user flows, the site platform architecture directly addresses the following user inquiries:</p>
+                <ul>
+                    <li>
+                        <strong>Scenario 1:</strong> "I am a junior software engineer who just moved into a new city. Where can I find a list of upcoming, free local Python or JavaScript developer meetups scheduled for this week?"
+                    </li>
+                    <li>
+                        <strong>Scenario 2:</strong> "I want to host or find tech networking events nearby. Where can I filter events specifically by distance or view them on an interactive regional map?"
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="color-scheme">
+            <h2>Color Scheme</h2>
+            <p>The chosen visual palette leverages high-contrast tones to evoke a crisp, modern tech environment. Contrast metrics strictly meet WCAG AA standards to guarantee readability across all devices.</p>
+            
+            <div class="color-grid">
+                <div class="color-swatch primary">
+                    <div class="swatch-box"></div>
+                    <h4>Primary (Slate Navy)</h4>
+                    <code>#0f172a</code>
+                    <p>Applied to main semantic headers, typography headings, and heavy structural block backgrounds.</p>
+                </div>
+                <div class="color-swatch secondary">
+                    <div class="swatch-box"></div>
+                    <h4>Secondary (Pulse Emerald)</h4>
+                    <code>#059669</code>
+                    <p>Applied strictly to structural borders, hyperlinked items, interactive elements, and CTA callouts.</p>
+                </div>
+                <div class="color-swatch neutral-light">
+                    <div class="swatch-box"></div>
+                    <h4>Neutral Light (Canvas)</h4>
+                    <code>#f8fafc</code>
+                    <p>Applied to global site-wide background body tags and structural whitespace containers.</p>
+                </div>
+                <div class="color-swatch neutral-dark">
+                    <div class="swatch-box"></div>
+                    <h4>Neutral Dark (Charcoal)</h4>
+                    <code>#334155</code>
+                    <p>Applied to standard body paragraphs and description text items to ensure structural eye comfort.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <div class="card">
+                <div class="font-example heading-font">
+                    <h3>Heading Font: Inter (Sans-Serif)</h3>
+                    <p class="sample-text">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                    <p><strong>Application:</strong> Used exclusively for all semantic structural headers (H1, H2, H3) to convey high technical authority, clarity, and visual precision.</p>
+                </div>
+                <div class="font-example body-font">
+                    <h3>Body Font: Open Sans (Sans-Serif)</h3>
+                    <p class="sample-text">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                    <p><strong>Application:</strong> Leveraged across all standard body paragraphs, block lists, explanations, and footer notes to maintain peak legible readability.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="wireframe">
+            <h2>Home Page Wireframes</h2>
+            <p>Visual schema blueprint outlining content relationship models across varying responsive device viewports.</p>
+            
+            <div class="wireframe-container">
+                <div class="wireframe-box mobile-view">
+                    <h3>Mobile Layout (Narrow)</h3>
+                    <div class="wf-element wf-header">[ Global Header / Burger Nav ]</div>
+                    <div class="wf-element wf-hero">[ Search Input &amp; City Filter ]</div>
+                    <div class="wf-element wf-content">[ Dynamic Event Feed Stack ]</div>
+                    <div class="wf-element wf-content">[ Secondary Map Toggle Button ]</div>
+                    <div class="wf-element wf-footer">[ Footer Context ]</div>
+                </div>
+
+                <div class="wireframe-box desktop-view">
+                    <h3>Desktop Layout (Wide Viewport)</h3>
+                    <div class="wf-element wf-header">[ Branding Logo Left | Global Search Bar Center | Main Navigation Links Right ]</div>
+                    <div class="wf-element wf-hero">[ Main Application Hero: Find Your Local Professional Pulse Today ]</div>
+                    <div class="wf-grid">
+                        <div class="wf-element grid-span-1">[ Left Pane: Dynamic Filter Controls &amp; Event Feed Cards List ]</div>
+                        <div class="wf-element grid-span-2">[ Right Pane: Full Screen Interactive API Map View Grid Box ]</div>
+                    </div>
+                    <div class="wf-element wf-footer">[ Footer Notes &mdash; Privacy, API Attributions, Repository Links ]</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LocalPulse Project Site Plan | Tailored for WDD231 Web Frontend Development</p>
+    </footer>
+
+</body>
+</html>
