@@ -1,18 +1,18 @@
 /* ==========================================================================
-   1. Core Layout Configuration & Design System
+   1. CORE DESIGN TOKENS & SYSTEM VARIABLE DEFINITIONS
    ========================================================================== */
 :root {
-    --primary-blue: #002b49;        /* Institutional background theme */
-    --accent-tint: #e6f2ff;         /* Interactive state backgrounds */
-    --text-dark: #333333;           /* Core text readability */
-    --text-muted: #666666;          /* Location and secondary text */
-    --surface-white: #ffffff;      /* Clean card and module sheets */
-    --border-line: #e2e8f0;        /* Grid/structural delimiters */
+    --primary-blue: #002b49;        /* Institutional background brand color */
+    --accent-tint: #e6f2ff;         /* Interactive highlights and selection overlays */
+    --text-dark: #333333;           /* Optimal reading contrast */
+    --text-muted: #666666;          /* Location data and meta descriptions */
+    --surface-white: #ffffff;       /* Structural asset backgrounds */
+    --border-line: #e2e8f0;         /* Grid/module partition lines */
     --speed-standard: 0.35s;
     --curve-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Base Viewport Reset */
+/* Document Base Reset */
 body {
     margin: 0;
     padding: 0;
@@ -23,7 +23,90 @@ body {
 }
 
 /* ==========================================================================
-   2. Mobile View Layout System (320px to 640px)
+   2. GLOBAL HEADER & ACCESSIBLE DROPDOWN NAVIGATION PIPELINE
+   ========================================================================== */
+.navigation-bar {
+    width: 100%;
+    background-color: #001f36;
+    margin-top: 1rem;
+    position: relative;
+}
+
+/* Accessible Mobile Toggle Button */
+#menuButton {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.7rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    text-align: right; 
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+#menuButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#menuButton .close-x {
+    display: none;
+}
+
+/* Adjust visibility tokens based on open toggle classes */
+#menuButton.open .hamburger { display: none; }
+#menuButton.open .close-x { display: inline; }
+
+/* Reset layout constraints and hide menu links natively on mobile viewport */
+ul.nav-links {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    background-color: #001524;
+}
+
+/* Hook toggled dynamically via scripts/discover.js */
+ul.nav-links.show {
+    display: flex;
+}
+
+ul.nav-links li {
+    width: 100%;
+}
+
+ul.nav-links li a {
+    display: block;
+    color: #ffffff; 
+    text-decoration: none; 
+    padding: 1.1rem 1.5rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 1.05rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background-color 0.2s ease;
+}
+
+ul.nav-links li a:hover {
+    background-color: #002b49;
+}
+
+/* Active Page State Indicator styling */
+ul.nav-links li a.active {
+    background-color: #e6f2ff;
+    color: #002b49;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   3. MOBILE VIEW LAYOUT ARCHITECTURE (Up to 640px)
    ========================================================================== */
 .discover-grid {
     display: grid;
@@ -38,12 +121,12 @@ body {
     margin: 0 auto;
 }
 
-/* Mapping Layout Areas */
+/* CSS Grid Named Template Area Bindings */
 #visitorMessage { grid-area: visitor; }
 .sidebar { grid-area: sidebar; }
 #cardsContainer { grid-area: content; }
 
-/* 2a. Visitor Alert Banner Context */
+/* 3a. Visitor Timeline Banner */
 .visitor-message {
     background-color: var(--accent-tint);
     border-left: 5px solid var(--primary-blue);
@@ -52,10 +135,9 @@ body {
     font-weight: 500;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    animation: slideDownMenu 0.4s ease-out;
 }
 
-/* 2b. Informational Profile Sidebar */
+/* 3b. Insights Info Sidebar */
 .sidebar {
     background-color: var(--surface-white);
     border: 1px solid var(--border-line);
@@ -104,7 +186,7 @@ body {
     border-bottom: none;
 }
 
-/* 2c. Discover Cards Layout Anchor */
+/* 3c. Core Discover Cards Flex Grid Layout */
 #cardsContainer {
     display: grid;
     grid-template-columns: 1fr;
@@ -131,21 +213,18 @@ body {
     margin: 0 0 1.2rem 0;
     overflow: hidden;
     border-radius: 6px;
-    background-color: #000000; /* Contrast floor backdrop */
+    background-color: #000000;
 }
 
-/* ⚠️ MANDATORY ASSIGNMENT COMPLIANCE: Image configurations reset on mobile views */
 .discover-figure img {
     display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
-    
-    /* Strip out custom presentation adjustments on mobile touch devices */
-    filter: none !important;
-    opacity: 1 !important;
-    border-radius: 0 !important;
-    transform: none !important;
+    filter: none;
+    opacity: 1;
+    border-radius: 0;
+    transform: none;
 }
 
 .discover-address {
@@ -160,7 +239,7 @@ body {
     font-size: 0.95rem;
     color: #4a5568;
     margin: 0 0 1.5rem 0;
-    flex-grow: 1; /* Automatically flushes buttons evenly along bottom edge line */
+    flex-grow: 1;
 }
 
 .discover-btn {
@@ -191,11 +270,35 @@ body {
 }
 
 /* ==========================================================================
-   3. Tablet & Desktop Adaptive Breakpoint Views (641px and above)
+   4. MEDIUM TABLET BREAKPOINT LAYOUT (641px and above)
    ========================================================================== */
 @media (min-width: 641px) {
-    
-    /* 3a. Mid-tier Grid Setup Rules */
+    #menuButton {
+        display: none;
+    }
+    .navigation-bar {
+        background: none;
+        margin-top: 0;
+        width: auto;
+    }
+    ul.nav-links {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        width: auto;
+    }
+    ul.nav-links li {
+        width: auto;
+    }
+    ul.nav-links li a {
+        color: inherit; 
+        width: auto;
+        padding: 0.5rem 1.2rem;
+        border-top: none;
+        text-align: left;
+    }
+
+    /* Convert page grid area definitions to 2 columns */
     .discover-grid {
         grid-template-columns: 280px 1fr;
         grid-template-areas:
@@ -205,12 +308,13 @@ body {
         padding: 1.5rem;
     }
 
+    /* Split dynamic layout area to 2 cards wide */
     #cardsContainer {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.8rem;
     }
 
-    /* 3b. Interactive Screenshot Hover Effects Infrastructure */
+    /* Transition animations infrastructure for images */
     .discover-figure img {
         transition: filter var(--speed-standard) var(--curve-smooth),
                     opacity var(--speed-standard) var(--curve-smooth),
@@ -218,50 +322,29 @@ body {
                     transform var(--speed-standard) var(--curve-smooth);
     }
 
-    /* Effect 1: Opacity alteration (.5) */
-    .discover-figure img.opac {
-        opacity: 0.5;
-    }
+    /* Meta dataset effect pipeline filters from .mjs objects */
+    .discover-figure img.opac { opacity: 0.5; }
+    .discover-figure img.rocorn { border-radius: 15px 150px; }
+    .discover-figure img.blur { filter: blur(4px); }
+    .discover-figure img.gray { filter: blur(1px) grayscale(50%); }
+    .discover-figure img.contrast { filter: contrast(50%); }
+    .discover-figure img.saturate { filter: saturate(50%); }
 
-    /* Effect 2: Leaf-shape Border Radius */
-    .discover-figure img.rocorn {
-        border-radius: 15px 150px;
-    }
-
-    /* Effect 3: Heavy blur filter */
-    .discover-figure img.blur {
-        filter: blur(4px);
-    }
-
-    /* Effect 4: Mild blur combined with partial grayscale transformation */
-    .discover-figure img.gray {
-        filter: blur(1px) grayscale(50%);
-    }
-
-    /* Effect 5: Contrast manipulation setup */
-    .discover-figure img.contrast {
-        filter: contrast(50%);
-    }
-
-    /* Effect 6: Saturation scale configuration */
-    .discover-figure img.saturate {
-        filter: saturate(50%);
-    }
-
-    /* Modern Interaction: Reset photo clarity when mouse hovers over a component card */
+    /* Interaction normalization hover responses */
     .discover-card:hover .discover-figure img {
-        filter: none !important;
-        opacity: 1 !important;
-        border-radius: 6px !important;
+        filter: none;
+        opacity: 1;
+        border-radius: 6px;
         transform: scale(1.04);
         cursor: pointer;
     }
 }
 
 /* ==========================================================================
-   4. High-End Widescreen Desktop Breakpoint (1025px and above)
+   5. PROFESSIONAL ENTERPRISE DESKTOP BREAKPOINT (1025px and above)
    ========================================================================== */
 @media (min-width: 1025px) {
+    /* Optimization configuration: Push components into widescreen layout arrays */
     .discover-grid {
         grid-template-columns: 320px 1fr;
         grid-template-areas:
@@ -271,6 +354,7 @@ body {
         padding: 2.5rem;
     }
 
+    /* Force collection items to organize cleanly inside a 3-column structural layout grid */
     #cardsContainer {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
