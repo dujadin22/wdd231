@@ -1,0 +1,278 @@
+/* ==========================================================================
+   1. Core Layout Configuration & Design System
+   ========================================================================== */
+:root {
+    --primary-blue: #002b49;        /* Institutional background theme */
+    --accent-tint: #e6f2ff;         /* Interactive state backgrounds */
+    --text-dark: #333333;           /* Core text readability */
+    --text-muted: #666666;          /* Location and secondary text */
+    --surface-white: #ffffff;      /* Clean card and module sheets */
+    --border-line: #e2e8f0;        /* Grid/structural delimiters */
+    --speed-standard: 0.35s;
+    --curve-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Viewport Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8fafc;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. Mobile View Layout System (320px to 640px)
+   ========================================================================== */
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "visitor"
+        "sidebar"
+        "content";
+    gap: 1.5rem;
+    padding: 1.2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Mapping Layout Areas */
+#visitorMessage { grid-area: visitor; }
+.sidebar { grid-area: sidebar; }
+#cardsContainer { grid-area: content; }
+
+/* 2a. Visitor Alert Banner Context */
+.visitor-message {
+    background-color: var(--accent-tint);
+    border-left: 5px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 1.2rem;
+    font-weight: 500;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    animation: slideDownMenu 0.4s ease-out;
+}
+
+/* 2b. Informational Profile Sidebar */
+.sidebar {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-line);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.sidebar h2 {
+    font-size: 1.35rem;
+    color: var(--primary-blue);
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent-tint);
+    padding-bottom: 0.5rem;
+}
+
+.stats-card {
+    background-color: #fdfdfd;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-line);
+}
+
+.stats-card h3 {
+    margin-top: 0;
+    font-size: 1.05rem;
+    color: var(--primary-blue);
+}
+
+.stats-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.stats-list li {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed var(--border-line);
+}
+
+.stats-list li:last-child {
+    border-bottom: none;
+}
+
+/* 2c. Discover Cards Layout Anchor */
+#cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.discover-card {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-line);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.discover-card h2 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: var(--primary-blue);
+}
+
+.discover-figure {
+    margin: 0 0 1.2rem 0;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #000000; /* Contrast floor backdrop */
+}
+
+/* ⚠️ MANDATORY ASSIGNMENT COMPLIANCE: Image configurations reset on mobile views */
+.discover-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+    /* Strip out custom presentation adjustments on mobile touch devices */
+    filter: none !important;
+    opacity: 1 !important;
+    border-radius: 0 !important;
+    transform: none !important;
+}
+
+.discover-address {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.discover-description {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1; /* Automatically flushes buttons evenly along bottom edge line */
+}
+
+.discover-btn {
+    background-color: var(--primary-blue);
+    color: var(--surface-white);
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.discover-btn:hover {
+    background-color: #001f36;
+}
+
+.noscript-error {
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #fed7d7;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   3. Tablet & Desktop Adaptive Breakpoint Views (641px and above)
+   ========================================================================== */
+@media (min-width: 641px) {
+    
+    /* 3a. Mid-tier Grid Setup Rules */
+    .discover-grid {
+        grid-template-columns: 280px 1fr;
+        grid-template-areas:
+            "visitor visitor"
+            "sidebar content";
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    #cardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+    }
+
+    /* 3b. Interactive Screenshot Hover Effects Infrastructure */
+    .discover-figure img {
+        transition: filter var(--speed-standard) var(--curve-smooth),
+                    opacity var(--speed-standard) var(--curve-smooth),
+                    border-radius var(--speed-standard) var(--curve-smooth),
+                    transform var(--speed-standard) var(--curve-smooth);
+    }
+
+    /* Effect 1: Opacity alteration (.5) */
+    .discover-figure img.opac {
+        opacity: 0.5;
+    }
+
+    /* Effect 2: Leaf-shape Border Radius */
+    .discover-figure img.rocorn {
+        border-radius: 15px 150px;
+    }
+
+    /* Effect 3: Heavy blur filter */
+    .discover-figure img.blur {
+        filter: blur(4px);
+    }
+
+    /* Effect 4: Mild blur combined with partial grayscale transformation */
+    .discover-figure img.gray {
+        filter: blur(1px) grayscale(50%);
+    }
+
+    /* Effect 5: Contrast manipulation setup */
+    .discover-figure img.contrast {
+        filter: contrast(50%);
+    }
+
+    /* Effect 6: Saturation scale configuration */
+    .discover-figure img.saturate {
+        filter: saturate(50%);
+    }
+
+    /* Modern Interaction: Reset photo clarity when mouse hovers over a component card */
+    .discover-card:hover .discover-figure img {
+        filter: none !important;
+        opacity: 1 !important;
+        border-radius: 6px !important;
+        transform: scale(1.04);
+        cursor: pointer;
+    }
+}
+
+/* ==========================================================================
+   4. High-End Widescreen Desktop Breakpoint (1025px and above)
+   ========================================================================== */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: 320px 1fr;
+        grid-template-areas:
+            "visitor content"
+            "sidebar content";
+        gap: 2.5rem;
+        padding: 2.5rem;
+    }
+
+    #cardsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
