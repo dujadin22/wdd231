@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tasting Club Registration | Equator &amp; Elevation</title>
+    <meta name="description" content="Register for our Single-Origin Tasting Club to lock in your brewing properties and receive exclusive micro-lot updates.">
+    <meta name="author" content="Michael Felix">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph Protocol Metadata -->
+    <meta property="og:title" content="Join the Single-Origin Tasting Club">
+    <meta property="og:description" content="Secure structural profile insights, community parameters, and roast allocations.">
+    <meta property="og:image" content="images/og-coffee-explorer.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/finalproject/join.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Performance Critical Font Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    
+    <!-- Script Engine Execution Architecture -->
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+    <a href="#form-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="site-title">Equator &amp; Elevation</span>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover Origins</a></li>
+                    <li><a href="join.html" class="active">Tasting Club</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="form-content" class="form-wrapper-block">
+        <section class="form-heading">
+            <h1>Club Registration</h1>
+            <p>Submit your roasting data profile to join our global sensory verification network.</p>
+        </section>
+
+        <form method="get" action="thank-you.html" class="custom-form">
+            
+            <fieldset>
+                <legend>Identification Details</legend>
+                
+                <label for="first-name">Given Name *</label>
+                <input type="text" id="first-name" name="firstName" required autocomplete="given-name">
+
+                <label for="last-name">Family Name *</label>
+                <input type="text" id="last-name" name="lastName" required autocomplete="family-name">
+
+                <label for="email-address">Secure Email Anchor *</label>
+                <input type="email" id="email-address" name="email" placeholder="explorer@domain.com" required autocomplete="email">
+
+                <label for="phone-number">Contact Line</label>
+                <input type="tel" id="phone-number" name="phone" placeholder="555-555-5555" autocomplete="tel">
+            </fieldset>
+
+            <fieldset>
+                <legend>Palate Index Classification</legend>
+                <p class="field-instruction">Select your target sensory profile baseline criteria:</p>
+                
+                <div class="radio-option">
+                    <input type="radio" id="pref-washed" name="flavorProfile" value="Washed-Vibrant" checked>
+                    <label for="pref-washed">Washed Processing (Citrus brightness, high floral tea complexity)</label>
+                </div>
+                
+                <div class="radio-option">
+                    <input type="radio" id="pref-natural" name="flavorProfile" value="Natural-Heavy">
+                    <label for="pref-natural">Natural Processing (Saccharine berry elements, heavy body profiles)</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extraction Background</legend>
+                <label for="brewing-notes">Elaborate briefly on your native home brewing gear or methodology setups:</label>
+                <textarea id="brewing-notes" name="brewingHardware" rows="4" placeholder="V60 Pour-over, manual espresso hand pumps, immersion basins, etc..."></textarea>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Transmit Registration</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-middle">
+            <div class="social-icons">
+                <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener"><img src="images/you.svg" alt="YouTube Logo" width="28" height="28"></a>
+                <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener"><img src="images/offline.svg" alt="Twitter Logo" width="28" height="28"></a>
+                <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="images/linkedin.svg" alt="LinkedIn Logo" width="28" height="28"></a>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> | Equator &amp; Elevation | Course Project Portfolio</p>
+            <p>Author: Michael Felix | WDD 231</p>
+            <div class="footer-links">
+              <a href="attributions.html">Resource Attributions</a> |
+              <a href="https://youtu.be/P3ZWhedga5k" target="_blank" rel="noopener">Project Video Demo</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

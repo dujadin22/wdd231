@@ -1,0 +1,112 @@
+/* ==========================================================================
+   SITE-WIDE STRUCTURAL LAYOUTS & RESPONSIVE GRID SYSTEMS
+   ========================================================================== */
+
+/* Global Structural Header Constraints */
+header {
+    background-color: var(--primary-dark);
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 1. PROFESSIONAL ZONING: Alternating background colors create visual chapters */
+main > section:nth-child(even) {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+}
+
+main > section:nth-child(odd) {
+    background-color: var(--secondary-light);
+}
+
+/* 2. RHYTHMIC SPACING: Generous padding for a luxury "air" effect */
+main > section {
+    padding: 5rem 1.5rem;
+}
+
+/* Directory Header Group */
+.directory-header-group {
+    max-width: var(--max-width);
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.directory-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.filter-controls-area {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-controls-area select {
+    padding: 0.6rem 2.5rem 0.6rem 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    transition: border-color var(--transition-smooth);
+}
+
+/* 3. FLUID RESPONSIVE GRIDS */
+.coffee-grid, 
+.features-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Global Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: #ffffff;
+    padding: 4rem 1.5rem;
+    margin-top: 0; /* Removed manual margin to rely on section padding */
+    border-top: 4px solid var(--accent-roast);
+}
+
+.footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 768px) {
+    main > section {
+        padding: 3rem 1.5rem;
+    }
+    .directory-header-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filter-controls-area {
+        width: 100%;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Verified | Equator &amp; Elevation</title>
+    <meta name="description" content="Confirmation page displaying parsed data parameters for successfully processed form submissions.">
+    <meta name="author" content="Michael Felix">
+    
+    <!-- Restrict search engine ranking on transactional processing nodes -->
+    <meta name="robots" content="noindex">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Performance Critical Font Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+
+    <!-- Script Engine Execution Architecture -->
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="site-title">Equator &amp; Elevation</span>
+            </div>
+            
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover Origins</a></li>
+                    <li><a href="join.html">Tasting Club</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="thank-you-layout">
+        <div class="confirmation-box">
+            <div class="check-mark" aria-hidden="true">✓</div>
+            <h1>Transmission Finalized!</h1>
+            <p>Your registration parameters have been successfully received and parsed. Here is your submission record:</p>
+            
+            <div id="formDataOutput" class="query-data-display">
+                <p class="status-msg">Extracting incoming data vectors...</p>
+            </div>
+            
+            <a href="index.html" class="back-home-link">← Return to Portal Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-middle">
+            <div class="social-icons">
+                <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener"><img src="images/you.svg" alt="YouTube Logo" width="28" height="28"></a>
+                <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener"><img src="images/offline.svg" alt="Twitter Logo" width="28" height="28"></a>
+                <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener"><img src="images/linkedin.svg" alt="LinkedIn Logo" width="28" height="28"></a>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> | Equator &amp; Elevation | Course Project Portfolio</p>
+            <p>Author: Michael Felix | WDD 231</p>
+            <div class="footer-links">
+                <a href="attributions.html">Resource Attributions</a> | 
+                <a href="https://youtu.be/P3ZWhedga5k" target="_blank" rel="noopener">Project Video Demo</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Injected Form Parser Utility Engine -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const queryDataStream = new URLSearchParams(window.location.search);
+            const dataDisplayArea = document.getElementById("formDataOutput");
+            
+            if (queryDataStream.size > 0) {
+                dataDisplayArea.innerHTML = "";
+                const dataList = document.createElement("dl");
+                dataList.className = "sanitized-data-list";
+                
+                queryDataStream.forEach((value, key) => {
+                    // Split camelCase and replace snake_case or hyphens with clean word spacing
+                    let visualKey = key.replace(/([A-Z])/g, ' $1')
+                                       .replace(/[_-]/g, ' ')
+                                       .trim();
+                    visualKey = visualKey.charAt(0).toUpperCase() + visualKey.slice(1);
+                    
+                    const dt = document.createElement("dt");
+                    dt.textContent = visualKey;
+                    
+                    // Replace URL plus signs with readable standard typography spaces
+                    const sanitizedValue = value ? decodeURIComponent(value.replace(/\+/g, ' ')) : "Omitted";
+                    
+                    const dd = document.createElement("dd");
+                    dd.textContent = sanitizedValue;
+                    
+                    dataList.appendChild(dt);
+                    dataList.appendChild(dd);
+                });
+                dataDisplayArea.appendChild(dataList);
+            } else {
+                dataDisplayArea.innerHTML = "<p class='error-msg'>No parameters detected from immediate form transmission.</p>";
+            }
+
+            // Fallback dynamic script runtime injection for local execution checks
+            const yearSpan = document.getElementById("current-year");
+            if (yearSpan && !yearSpan.textContent) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

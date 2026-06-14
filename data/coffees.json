@@ -1,0 +1,152 @@
+[
+  {
+    "id": "ethiopia-yirgacheffe",
+    "name": "Ethiopia Yirgacheffe",
+    "region": "Sidamo, Ethiopia",
+    "process": "Natural",
+    "altitude": "1,900m - 2,100m",
+    "flavorNotes": ["Jasmine", "Bergamot", "Lemon Tea"],
+    "image": "images/coffee-1.jpg",
+    "description": "Renowned for its distinct floral aroma, bright citrus acidity, and light body, this coffee behaves almost like a fine jasmine tea."
+  },
+  {
+    "id": "colombia-sidra",
+    "name": "Colombia Finca El Paraiso",
+    "region": "Cauca, Colombia",
+    "process": "Natural",
+    "altitude": "1,850m",
+    "flavorNotes": ["Strawberry", "Yogurt", "Passionfruit"],
+    "image": "images/coffee-2.jpg",
+    "description": "An experimental anaerobic natural processing method gives this coffee an intensely fruity, creamy profile reminiscent of fresh summer berries."
+  },
+  {
+    "id": "guatemala-huehuetenango",
+    "name": "Guatemala Huehuetenango",
+    "region": "Highlands, Guatemala",
+    "process": "Natural",
+    "altitude": "1,600m - 1,800m",
+    "flavorNotes": ["Milk Chocolate", "Toffee", "Orange Zest"],
+    "image": "images/coffee-3.jpg",
+    "description": "Protected from frost by hot winds from Mexico, this classic cup delivers a distinct crisp acidity paired with rich, buttery chocolate notes."
+  },
+  {
+    "id": "kenya-nyeri",
+    "name": "Kenya Nyeri AA",
+    "region": "Nyeri County, Kenya",
+    "process": "Natural",
+    "altitude": "1,750m",
+    "flavorNotes": ["Blackcurrant", "Grapefruit", "Tomato Jam"],
+    "image": "images/coffee-4.jpg",
+    "description": "Grown in volcanic soils near Mt. Kenya, this AA lot boasts an explosive, complex phosphoric acidity and deep black fruit sweetness."
+  },
+  {
+    "id": "indonesia-sumatra",
+    "name": "Sumatra Mandheling",
+    "region": "Lintong, Indonesia",
+    "process": "Natural",
+    "altitude": "1,200m - 1,400m",
+    "flavorNotes": ["Cedar", "Dark Chocolate", "Earthy Herbs"],
+    "image": "images/coffee-5.jpg",
+    "description": "Processed using a traditional wet-hulling method, this heavy-bodied profile yields an intensely herbaceous, spicy, and deeply complex cup."
+  },
+  {
+    "id": "costarica-tarrazu",
+    "name": "Costa Rica Tarrazú",
+    "region": "San José, Costa Rica",
+    "process": "Natural",
+    "altitude": "1,400m - 1,900m",
+    "flavorNotes": ["Honey", "Brown Sugar", "Green Apple"],
+    "image": "images/coffee-6.jpg",
+    "description": "A exceptionally clean natural process bean noted for high fine acidity, satisfying medium body, and a comforting, honeyed finish."
+  },
+  {
+    "id": "brazil-cerrado",
+    "name": "Brazil Cerrado Mineiro",
+    "region": "Minas Gerais, Brazil",
+    "process": "Natural",
+    "altitude": "900m - 1,250m",
+    "flavorNotes": ["Roasted Peanut", "Cocoa", "Caramel"],
+    "image": "images/coffee-7.jpg",
+    "description": "A classic, low-acid natural coffee exhibiting high sweetness, a velvety heavy body, and dominant notes of toasted nuts and chocolate."
+  },
+  {
+    "id": "panama-geisha",
+    "name": "Panama Esmeralda Geisha",
+    "region": "Boquete, Panama",
+    "process": "Washed",
+    "altitude": "1,700m",
+    "flavorNotes": ["Peach", "Orchid", "Mandarin Orange"],
+    "image": "images/coffee-8.jpg",
+    "description": "One of the most prized varieties in the world, renowned for its distinct floral aroma, explosive stone fruit sweetness, and elegant body."
+  },
+  {
+    "id": "rwanda-nyamasheke",
+    "name": "Rwanda Nyamasheke",
+    "region": "Western Province, Rwanda",
+    "process": "Washed",
+    "altitude": "1,800m",
+    "flavorNotes": ["Black Tea", "Red Currant", "Cinnamon"],
+    "image": "images/coffee-9.jpg",
+    "description": "Grown near Lake Kivu, this selection offers sweet black tea qualities coupled with a snappy, bright red berry flavor signature."
+  },
+  {
+    "id": "el-salvador-pacamara",
+    "name": "El Salvador Pacamara",
+    "region": "Santa Ana, El Salvador",
+    "process": "Natural",
+    "altitude": "1,500m",
+    "flavorNotes": ["Plum", "Cacao Nibs", "Baking Spices"],
+    "image": "images/coffee-10.jpg",
+    "description": "The large Pacamara seed yields an uncommonly intense savoriness alongside deep stone fruit characteristics and herbal nuances."
+  },
+  {
+    "id": "yemen-haria",
+    "name": "Yemen Mocha Harazi",
+    "region": "Haraz, Yemen",
+    "process": "Natural",
+    "altitude": "2,200m",
+    "flavorNotes": ["Dried Fig", "Cardamom", "Dark Molasses"],
+    "image": "images/coffee-11.jpg",
+    "description": "Cultivated on high altitude terraced mountainsides for centuries. Intensely rustic, wild, and heavy with winey fruit and ancient spice notes."
+  },
+  {
+    "id": "peru-cajamarca",
+    "name": "Peru Cajamarca",
+    "region": "Andes Highlands, Peru",
+    "process": "Washed",
+    "altitude": "1,650m",
+    "flavorNotes": ["Almond Butter", "Red Apple", "Maple Syrup"],
+    "image": "images/coffee-12.jpg",
+    "description": "Produced by a fair-trade co-op, this exceptionally clean washed organic lot centers around comfortable tree fruit sweetness and a soft nutty profile."
+  },
+  {
+    "id": "mexico-oaxaca",
+    "name": "Mexico Pluma Oaxaca",
+    "region": "Sierra Madre, Mexico",
+    "process": "Washed",
+    "altitude": "1,300m",
+    "flavorNotes": ["Brown Sugar", "Pear", "Milk Chocolate"],
+    "image": "images/coffee-13.jpg",
+    "description": "A light-to-medium bodied staple highlighting smooth balance, low fruit sharpness, and a crisp clean finish perfect for all-day brewing."
+  },
+  {
+    "id": "ethiopia-guji",
+    "name": "Ethiopia Guji Natural",
+    "region": "Oromia, Ethiopia",
+    "process": "Natural",
+    "altitude": "2,000m",
+    "flavorNotes": ["Blueberry Jam", "Lavender", "Dark Chocolate"],
+    "image": "images/coffee-14.jpg",
+    "description": "A classic natural process profile displaying prominent blueberry aromas, thick syrupy sweetness, and a heavy floral body."
+  },
+  {
+    "id": "honduras-marcala",
+    "name": "Honduras Marcala",
+    "region": "La Paz, Honduras",
+    "process": "Natural",
+    "altitude": "1,450m",
+    "flavorNotes": ["Raisin", "Vanilla", "Toasted Walnut"],
+    "image": "images/coffee-15.jpg",
+    "description": "An eco-friendly solar-dried natural coffee presenting structured dried fruit sugars, gentle body, and a clean caramel tail."
+  }
+]
