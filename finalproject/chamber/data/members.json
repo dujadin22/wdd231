@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Eko Innovation Centre",
+    "address": "50 Awolowo Rd, Ikoyi, Lagos",
+    "phone": "+234 801 234 5678",
+    "website": "https://www.google.com",
+    "image": "https://placehold.co/200x200/003366/white?text=Eko+Tech",
+    "membershipLevel": 3,
+    "tagline": "Accelerating digital transformation in Nigeria."
+  },
+  {
+    "name": "Victoria Island Realtors",
+    "address": "15 Adetokunbo Ademola St, VI, Lagos",
+    "phone": "+234 902 333 4444",
+    "website": "https://www.wikipedia.org",
+    "image": "https://placehold.co/200x200/003366/white?text=VI+Realty",
+    "membershipLevel": 2,
+    "tagline": "Your bridge to luxury real estate."
+  },
+  {
+    "name": "Lekki Creative Hub",
+    "address": "Plot 9, Admiralty Way, Lekki Phase 1",
+    "phone": "+234 810 555 0192",
+    "website": "https://www.w3schools.com",
+    "image": "https://placehold.co/200x200/003366/white?text=Lekki+Studio",
+    "membershipLevel": 1,
+    "tagline": "Empowering the next generation of Lagos creatives."
+  },
+  {
+    "name": "Mainland Logistics Group",
+    "address": "102 Obafemi Awolowo Way, Ikeja",
+    "phone": "+234 703 111 2222",
+    "website": "https://www.github.com",
+    "image": "https://placehold.co/200x200/003366/white?text=Mainland+Logistics",
+    "membershipLevel": 2,
+    "tagline": "Reliable supply chain solutions nationwide."
+  },
+  {
+    "name": "Danfo Digital Agency",
+    "address": "5 Opebi Link Rd, Ikeja, Lagos",
+    "phone": "+234 809 444 5555",
+    "website": "https://www.linkedin.com",
+    "image": "https://placehold.co/200x200/003366/white?text=Danfo+Digital",
+    "membershipLevel": 3,
+    "tagline": "Navigating your brand through the Lagos market."
+  },
+  {
+    "name": "Island Gourmet Kitchen",
+    "address": "33 Banana Island Rd, Ikoyi",
+    "phone": "+234 905 777 8888",
+    "website": "https://www.facebook.com",
+    "image": "https://placehold.co/200x200/003366/white?text=Gourmet",
+    "membershipLevel": 1,
+    "tagline": "The finest culinary experiences in Lagos."
+  },
+  {
+    "name": "Palmview Legal Chambers",
+    "address": "Level 4, Heritage Tower, Marina",
+    "phone": "+234 802 666 7777",
+    "website": "https://www.byui.edu",
+    "image": "https://placehold.co/200x200/003366/white?text=Palmview+Law",
+    "membershipLevel": 3,
+    "tagline": "Protecting enterprise and innovation."
+  }
+]
