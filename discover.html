@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Discover Origins | Equator & Elevation</title>
+    <meta name="description" content="Explore fifteen detailed specialty coffee profiles. Filter by processing style and view custom flavor notes using dynamic UI grids.">
+    <meta name="author" content="Your Name">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <meta property="og:title" content="Discover Single-Origin Profiles">
+    <meta property="og:description" content="Filter and analyze processing chemistry variations across fifteen micro-lot world coffees.">
+    <meta property="og:image" content="images/og-coffee-explorer.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/finalproject/discover.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+    <a href="#directory-main" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="site-title">Equator &amp; Elevation</span>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover Origins</a></li>
+                    <li><a href="join.html">Tasting Club</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   <main id="directory-main">
+    <section class="directory-header-group">
+        <div class="directory-intro">
+            <h1>Global Bean Index</h1>
+            <p>Deconstruct regional crops. Dynamically parsed through modern asynchronous modules.</p>
+        </div>
+
+        <section class="filter-controls-area">
+            <label for="process-filter">Filter Processing Methods:</label>
+            <select id="process-filter">
+                <option value="all">Show All 15 Lots</option>
+                <option value="Washed">Washed Process (Clean, High Brightness)</option>
+                <option value="Natural">Natural Process (Heavy Body, Intense Fruit)</option>
+            </select>
+        </section>
+    </section>
+
+    <section class="coffee-grid" aria-live="polite">
+        </section>
+</main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 | Equator &amp; Elevation | Course Project Portfolio</p>
+            <p>Author: Michael Felix | WDD 231</p>
+            <div class="footer-links">
+                <a href="attributions.html">Resource Attributions</a>
+                <a href="attributions.html">Resource Attributions</a> | 
+                <a href="https://youtu.be/P3ZWhedga5k" target="_blank" rel="noopener">Project Video Demo</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
